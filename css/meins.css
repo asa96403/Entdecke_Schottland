@@ -15,7 +15,8 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    border-right: #ffffff;
+    border-right: solid 1px #ffffff;
+    transition: 0.3s;
   }
   
   /* Change the color of links on hover */
@@ -29,7 +30,6 @@
     background-color: #0d8899;
     color: white;
   }
-
 
   /* Element Deklaration */
   body {
@@ -82,10 +82,13 @@ h1 {
 
 h2 {
   font-family: Merriwheather, serif;
-  font-size: 1.8em;
+  font-size: 1.9em;
   font-weight: bold;
   text-decoration: underline;
   text-align: center;
+}
+a {
+  color: aqua;
 }
 
 /* Klassen Deklarationen */
@@ -93,7 +96,7 @@ h2 {
   display: grid;
   background-color: #000000;
   grid-template-columns: 79% 20%;
-  grid-template-rows: 55px 10% 50% 100px;
+  grid-template-rows: 55px 10% auto 100px;
   column-gap: 1%;
 }
 
@@ -106,6 +109,22 @@ h2 {
     top: 0;
     
 }
+
+.sidenav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sidenav a {
+  width:90%;
+  margin: 2%;
+  border: solid white 1px;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 .leftBox {
      border: solid rgb(255, 255, 255) 1px;
     border-radius: 5px;
@@ -113,6 +132,7 @@ h2 {
     padding: 10px;
     grid-row: 3/3;
     grid-column: 1/1;
+    margin-bottom: 1%;
 }
 .sidebar {
   grid-row: 3/3;
@@ -133,6 +153,15 @@ h2 {
   border-radius: 10px;
 }
 
+.warning {
+  background-color: red;
+  color: #ffffff;
+  border-left: 22px solid red;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: white 2px 2px 2px ;
+}
+
 /* Icons*/
 .material-symbols-outlined {
   font-variation-settings:
@@ -140,6 +169,15 @@ h2 {
   'wght' 500,
   'GRAD' 0,
   'opsz' 100
+}
+
+.navCat {
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+}
+.navcat:hover {
+  background-color: #000000;
 }
 
 
