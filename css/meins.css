@@ -46,10 +46,18 @@ img.header {
 }
 img.inText {
     border-radius: 5px;
-    border-color: white;
-    border-style: solid;
     width: 100%;
+    border: white solid 1px;
 }
+img.article {
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+img.icon{
+    height: 20px;
+}
+
 header{
    grid-row-start: 2;
     grid-row-end: 2;
@@ -67,7 +75,7 @@ footer {
   text-align: center;
   border-top: solid rgb(255, 255, 255) 1px;
   margin-top: 25px;
-  padding: 10px;
+  padding: 15px;
   grid-row: 4 / span 1;
   grid-column: 1 / span 2;
 }
@@ -91,12 +99,20 @@ a {
   color: aqua;
 }
 
+figure {
+  margin: 0px;
+}
+
+figcaption {
+  text-align: center;
+}
+
 /* Klassen Deklarationen */
 .grid-container {
   display: grid;
   background-color: #000000;
   grid-template-columns: 79% 20%;
-  grid-template-rows: 55px 10% auto 100px;
+  grid-template-rows: 55px 10% auto 80px;
   column-gap: 1%;
 }
 
@@ -123,6 +139,8 @@ a {
   border-radius: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
+  color: cyan;
+  text-decoration: none;
 }
 
 .leftBox {
@@ -141,10 +159,36 @@ a {
     justify-content: space-evenly;
 }
 
+.articleFlex {
+    display: flex;
+    flex-wrap: none;
+    justify-content: space-evenly;
+    border: 1px cyan solid;
+    border-radius: 5px;
+}
+
 .flexItem {
-  max-width: 400px;
+  max-width: 340px;
   border: 1px white solid;
-  border-radius: 5px;;
+  border-radius: 5px;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+.flexItemBorderless {
+  max-width: 60%;
+  border-radius: 5px;
+  padding: 3px;
+  margin-bottom: 5px;
+  margin: none;
+}
+
+.flexItemBorderlessImg {
+  max-width: 35%;
+  border-radius: 5px;
+  padding: 3px;
+  margin-bottom: 5px;
+  margin: none;
 }
 
 .sidebar {
@@ -168,7 +212,7 @@ a {
 
 .warning {
   background-color: red;
-  color: #ffffff;
+  color: black;
   border-left: 22px solid red;
   padding: 5px;
   border-radius: 5px;
