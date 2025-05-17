@@ -15,6 +15,7 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    border-right: #ffffff;
   }
   
   /* Change the color of links on hover */
@@ -53,6 +54,13 @@ header{
    grid-row-start: 2;
     grid-row-end: 2;
     grid-column: 1 / span 2;
+    background-image: url(../img/Banner.png);
+    background-size: cover;
+    padding: 1.5%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 footer {
@@ -113,6 +121,16 @@ h2 {
   border: solid rgb(255, 255, 255) 1px;
   padding: 10px;
   border-radius: 5px;
+}
+
+.banner{
+  font-weight: bolder;
+  font-size: 50px;
+  color: #ffffff;
+  background-color: #000000;
+  opacity: 0.7;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 /* Icons*/
