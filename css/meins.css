@@ -50,8 +50,10 @@ img.inText {
     border: white solid 1px;
 }
 img.article {
+  max-width: 35%;
   border-radius: 5px;
-  max-width: 100%;
+  padding: 3px;
+  margin-bottom: 5px;
 }
 
 img.icon{
@@ -115,7 +117,7 @@ figcaption {
   grid-template-rows: 55px 10% auto 80px;
   column-gap: 1%;
 }
-
+/* Navigation*/
 .navItem {
    grid-row-start: 1;
     grid-row-end: 1;
@@ -143,6 +145,13 @@ figcaption {
   text-decoration: none;
 }
 
+.sidenav a:hover {
+  background-color: #ffffff;
+  color: #020522;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
 .leftBox {
      border: solid rgb(255, 255, 255) 1px;
     border-radius: 5px;
@@ -161,10 +170,12 @@ figcaption {
 
 .articleFlex {
     display: flex;
-    flex-wrap: none;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    border: 1px cyan solid;
-    border-radius: 5px;
+    padding: 3px;
+    align-items: center;
+    border-top: 1px cyan solid;
+    border-bottom: 1px cyan solid;
 }
 
 .flexItem {
@@ -180,15 +191,6 @@ figcaption {
   border-radius: 5px;
   padding: 3px;
   margin-bottom: 5px;
-  margin: none;
-}
-
-.flexItemBorderlessImg {
-  max-width: 35%;
-  border-radius: 5px;
-  padding: 3px;
-  margin-bottom: 5px;
-  margin: none;
 }
 
 .sidebar {
@@ -219,6 +221,22 @@ figcaption {
   box-shadow: white 2px 2px 2px ;
 }
 
+.collage {
+  display: flex;
+  max-width: 35%;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 0px;
+  flex-wrap: wrap;
+}
+
+.collageElement {
+  width: 49%;
+  border-radius: 3px;
+  margin:0px;
+  border: white solid 1px;
+}
+
 /* Icons*/
 .material-symbols-outlined {
   font-variation-settings:
@@ -237,6 +255,9 @@ figcaption {
   background-color: #000000;
 }
 
+.center {
+  text-align: center;
+}
 
 /* Identifier Deklaration */
 
