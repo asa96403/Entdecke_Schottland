@@ -1,10 +1,18 @@
 /* w3schools */
 /* Add a black background color to the top navigation */
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
 .topnav {
     background-color: #060d4e;
     overflow: hidden;
     border-radius: 5px;
     border: solid cyan 2px;
+    z-index: 1000;
   }
   
   /* Style the links inside the navigation bar */
@@ -30,6 +38,99 @@
     background-color: #0d8899;
     color: white;
   }
+  /*Slideshow*/
+  
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  z-index: 1;
+}
+
+.slideshow {
+  width: 35%;
+}
+
+/* Hide the images by default */
+.mySlides , .mySlides2 {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  backdrop-filter: brightness(0.7);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(5px) brightness(0.4);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot, .dot2 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover, .dot2:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 
   /* Element Deklaration */
   body {
@@ -65,6 +166,7 @@ header{
     grid-row-end: 2;
     grid-column: 1 / span 2;
     background-image: url(../img/Banner.png);
+    background-position: center;
     background-size: cover;
     padding: 1.5%;
     display: flex;
@@ -135,14 +237,7 @@ figcaption {
 }
 
 .sidenav a {
-  width:90%;
-  margin: 2%;
-  border: solid white 1px;
-  border-radius: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  color: cyan;
-  text-decoration: none;
+  
 }
 
 .sidenav a:hover {
@@ -175,7 +270,17 @@ figcaption {
     padding: 3px;
     align-items: center;
     border-top: 1px cyan solid;
-    border-bottom: 1px cyan solid;
+    padding-top: 10px;
+}
+
+.articleFlexRight {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 3px;
+    align-items: center;
+    padding-top: 10px;
+    flex-direction: row-reverse;
 }
 
 .flexItem {
@@ -183,7 +288,7 @@ figcaption {
   border: 1px white solid;
   border-radius: 5px;
   padding: 3px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .flexItemBorderless {
@@ -250,13 +355,75 @@ figcaption {
   display: flex;
   justify-content: center;
   column-gap: 5px;
+  width:90%;
+  margin: 2%;
+  border: solid white 1px;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: cyan;
+  text-decoration: none;
 }
+
+.navCatUnder {
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+  border-left: solid 2px white;
+  margin-left: 15%;
+  width:75%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  color: cyan;
+  text-decoration: none;
+}
+
+.navCatTop {
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+}
+
 .navcat:hover {
   background-color: #000000;
 }
 
 .center {
   text-align: center;
+}
+
+.eingabeFeld {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eingabeFeld input {
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+}
+
+.eingabeFeld textarea {
+  width: 80%;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+}
+
+button {
+  margin-left: 10%;
+  border: cyan double 1px;
+  border-radius: 5px;
+  padding: 5px
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 /* Identifier Deklaration */
