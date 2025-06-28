@@ -12,7 +12,6 @@ html {
     overflow: hidden;
     border-radius: 5px;
     border: solid cyan 2px;
-    z-index: 1000;
   }
   
   /* Style the links inside the navigation bar */
@@ -44,7 +43,6 @@ html {
 .slideshow-container {
   position: relative;
   margin: auto;
-  z-index: 1;
 }
 
 .slideshow {
@@ -227,6 +225,7 @@ figcaption {
     position: sticky ;
     left: 0;
     top: 0;
+    z-index: 10000;
     
 }
 
@@ -234,10 +233,6 @@ figcaption {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.sidenav a {
-  
 }
 
 .sidenav a:hover {
@@ -263,7 +258,7 @@ figcaption {
     justify-content: space-evenly;
 }
 
-.articleFlex {
+.articleFlex, .vorschlagFlex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -402,8 +397,10 @@ figcaption {
 .eingabeFeld input {
   width: 100%;
   padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin: 5px;
-  border-radius: 5px;
+  border-radius: 30px;
   border: solid 1px #ccc;
 }
 
@@ -424,6 +421,19 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+.vorschlagHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.vorschlagFlex {
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-bottom: 10px;
 }
 
 /* Identifier Deklaration */
