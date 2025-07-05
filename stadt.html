@@ -21,6 +21,12 @@
       <h1 class="banner">Städte</h1>
     </header>
     <nav class="navItem">
+      <div class="logoHead">
+        <a href="index.html">
+          <img src="img/Favicon.jpg">
+          <h3>Entdecke Schottland</h3>
+        </a>
+      </div>
       <div class="topnav">
         <a href="./index.html">
           <div class="navCatTop"><span class="material-symbols-outlined">home</span> Start </div>
@@ -35,11 +41,20 @@
           <div class="navCatTop"><span class="material-symbols-outlined">wand_stars</span> Wizarding World</div>
         </a>
       </div>
+      <div class="fontSizeSelection">
+        <label for="fontSize">Schriftgröße: </label>
+        <select id="fontSize" onchange="changeFontSize(this.value)">
+          <option value="12">12</option>
+          <option value="14">14</option>
+          <option value="16">16</option>
+          <option value="18">18</option>
+        </select>
+      </div>
     </nav>
 
     <main>
       <div id="intro" class="leftBox">
-        <p>Hier finden Sie viele schöne Städte in Schottland mit ihren Sehenswürdigkeiten. Manche der Städte bieten auch
+        <p class="changable">Hier finden Sie viele schöne Städte in Schottland mit ihren Sehenswürdigkeiten. Manche der Städte bieten auch
           Zugang zu tollen Landschaften, die daher hier auch gelistet sind.
         </p>
       </div>
@@ -49,9 +64,9 @@
           <img class="article" src="img/20240719_130351.jpg" alt="Endinburgh Castle Frontansicht">
           <article class="flexItemBorderless" id="castle">
             <h3>Edinburgh Castle</h3>
-            <p>Das Edinburgh Castle liegt auf dem 135m hohen Castle Rock von dem man einen tollen Ausblick auf die
+            <p class="changable">Das Edinburgh Castle liegt auf dem 135m hohen Castle Rock, von dem man einen tollen Ausblick auf die
               Unesco Weltkulturerbe-Stadt Edinburgh hat.
-              Innen kann man viele Bereiche besichtigen, wie die Great Hall oder die Kronjuwelen im Royal Palace.¹
+              Innen kann man viele Bereiche besichtigen, wie die Great Hall oder die Kronjuwelen im Royal Palace.
             </p>
             <a href="https://www.edinburghcastle.scot/">Webseite des Edinburgh Castle</a>
           </article>
@@ -69,7 +84,7 @@
           </div>
           <article class="flexItemBorderless">
             <h3>The Royal Edinburgh Military Tattoo</h3>
-            <p>Auf dem Schlossplatz findet jedes Jahr im August das Royal Edinburgh Military Tattoo statt.
+            <p class="changable">Auf dem Schlossplatz findet jedes Jahr im August das Royal Edinburgh Military Tattoo statt.
               Vor dem Hintergrund des Schlosses, auf dem wechselnde Projektionen gezeigt werden, können die Zuschauer
               auf den Tribünen vor allem Militärmusik mit vielen Dudelsackspielern und den Lone Piper hören.
               An manchen Tagen findet auch ein Feuerwerk statt.</p>
@@ -89,7 +104,7 @@
           </div>
           <article class="flexItemBorderless" id="castle">
             <h3>Oban</h3>
-            <p>Der im Westen Schottlands gelegene Küstenort Oban ist idealer Ausgangspunkt für Ausflüge zu den der Küste
+            <p class="changable">Der im Westen Schottlands gelegene Küstenort Oban ist idealer Ausgangspunkt für Ausflüge zu den der Küste
               vorgelagerten Inseln Mull, Iona und Staffa. In Oban selbst lohnt ein Spaziergang zum oberhalb der Stadt
               gelegenen McCaig’s Tower, einem unvollendeten Nachbau des Kolosseums in Rom.</p>
           </article>
@@ -143,7 +158,7 @@
           </div>
           <article class="flexItemBorderless">
             <h3>Isle of Mull, Iona und Staffa</h3>
-            <p>Sehenswert sind auf der Insel Mull die bunte Häuserzeile in Tobermory und das Kloster auf Iona. Besonders
+            <p class="changable">Sehenswert sind auf der Insel Mull die bunte Häuserzeile in Tobermory und das Kloster auf Iona. Besonders
               interessant ist vor allem auch ein Ausflug zur der aus Basaltsäulen bestehenden, unbewohnten Insel Staffa
               mit ihrer Fingalshöhle. Bei einer Wanderung über die Insel kann man an den Klippen hunderte
               Papageientaucher beobachten.</p>
@@ -209,7 +224,7 @@
           </div>
           <article class="flexItemBorderless">
             <h3>Dundee</h3>
-            <p>Dundee, früher bekannt für seine Jutefabriken, ist heute die „UNESCO City of Design“. Sehenswert sind
+            <p class="changable">Dundee, früher bekannt für seine Jutefabriken, ist heute die „UNESCO City of Design“. Sehenswert sind
               hier das „Royal Research Ship Discovery“, mit dem Scott 1901 bis 1904 eine Südpolarexpedition unternahm
               sowie das <a href="https://www.vam.ac.uk/dundee">Designmuseum V&A Dundee</a> am River Tay, das auch durch
               seine Architektur auffällt. Insbesondere
@@ -224,7 +239,7 @@
         <h2>Vorschläge</h2>
         <p>Sie waren schonmal in Schottland und haben einen Vorschlag, welche Stadt man besuchen sollte? Füllen Sie das
           Formular aus und wir werden Ihren Vorschlag gegebenenfalls demnächst hinzufügen! </p>
-          <h3 id="hinzufügen">Vorschlag hinzufügen</h3>
+        <h3 id="hinzufügen">Vorschlag hinzufügen</h3>
         <div class="articleFlex">
           <div class="eingabeFeld">
             <label for="name">Name :</label>
@@ -263,7 +278,8 @@
         <a href="#dundee" class="navCat"><span class="material-symbols-outlined">museum</span> Dundee</a>
         <a href="#vorschläge" class="navCat"><span class="material-symbols-outlined">lightbulb</span> Vorschläge</a>
         <a href="#hinzufügen" class="navCatUnder"><span class="material-symbols-outlined">add</span> hinzufügen</a>
-        <a href="#nutzervorschlaege" class="navCatUnder"><span class="material-symbols-outlined">search</span> ansehen</a>
+        <a href="#nutzervorschlaege" class="navCatUnder"><span class="material-symbols-outlined">search</span>
+          ansehen</a>
       </nav>
       <h2>Quellen</h2>
       <p class="center">Bilder: André Abert

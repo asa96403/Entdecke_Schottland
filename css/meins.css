@@ -8,21 +8,21 @@ html {
 }
 
 .topnav {
-    background-color: #060d4e;
     overflow: hidden;
-    border-radius: 5px;
-    border: solid cyan 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: white solid 1px;
   }
   
   /* Style the links inside the navigation bar */
   .topnav a {
-    float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    border-right: solid 1px #ffffff;
+    border-left: solid 1px #ffffff;
     transition: 0.3s;
   }
   
@@ -226,13 +226,57 @@ figcaption {
     left: 0;
     top: 0;
     z-index: 10000;
-    
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 5px;
+    border: solid cyan 2px;
+    background-color: #060d4e;
+}
+
+.logoHead a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  margin-top: 0px;
+  height: 100%;
+}
+
+.logoHead h3 {
+  margin: 0px;
+}
+
+.logoHead img {
+  height: 40px;
+  border-radius: 5px;
+  margin-left: 10px;
 }
 
 .sidenav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+#fontSize {
+  background-color: #060d4e;
+  color: white;
+  border: white 1px solid;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+.fontSizeSelection {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: white 1px solid;
+  padding: 10px
 }
 
 .sidenav a:hover {

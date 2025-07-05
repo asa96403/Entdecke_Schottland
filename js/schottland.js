@@ -72,3 +72,10 @@ function vorschlagEinsenden() {
   post += "</p> </div>"  + document.getElementById("beschreibung").value  + "</article>";
   document.getElementById("nutzervorschlaege").innerHTML += post;
 }
+
+function changeFontSize(val) {
+  let paragraphs = document.getElementsByClassName("changable");
+  for (let i =0; i<paragraphs.length; i++) {
+    paragraphs[i].style.fontSize = val + "px";
+  }
+}
