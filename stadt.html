@@ -23,7 +23,7 @@
     <nav class="navItem">
       <div class="logoHead">
         <a href="index.html">
-          <img src="img/Favicon.jpg">
+          <img src="img/Favicon.jpg" alt="Schottlandflagge">
           <h3>Entdecke Schottland</h3>
         </a>
       </div>
@@ -48,13 +48,15 @@
           <option value="14">14</option>
           <option value="16">16</option>
           <option value="18">18</option>
+          <option value="20">20</option>
         </select>
       </div>
     </nav>
 
     <main>
       <div id="intro" class="leftBox">
-        <p class="changable">Hier finden Sie viele schöne Städte in Schottland mit ihren Sehenswürdigkeiten. Manche der Städte bieten auch
+        <p class="changable">Hier finden Sie viele schöne Städte in Schottland mit ihren Sehenswürdigkeiten. Manche der
+          Städte bieten auch
           Zugang zu tollen Landschaften, die daher hier auch gelistet sind.
         </p>
       </div>
@@ -62,9 +64,10 @@
         <h2>Edinburgh</h2>
         <div class="articleFlex" id="castle">
           <img class="article" src="img/20240719_130351.jpg" alt="Endinburgh Castle Frontansicht">
-          <article class="flexItemBorderless" id="castle">
+          <article class="flexItemBorderless">
             <h3>Edinburgh Castle</h3>
-            <p class="changable">Das Edinburgh Castle liegt auf dem 135m hohen Castle Rock, von dem man einen tollen Ausblick auf die
+            <p class="changable">Das Edinburgh Castle liegt auf dem 135m hohen Castle Rock, von dem man einen tollen
+              Ausblick auf die
               Unesco Weltkulturerbe-Stadt Edinburgh hat.
               Innen kann man viele Bereiche besichtigen, wie die Great Hall oder die Kronjuwelen im Royal Palace.
             </p>
@@ -84,7 +87,8 @@
           </div>
           <article class="flexItemBorderless">
             <h3>The Royal Edinburgh Military Tattoo</h3>
-            <p class="changable">Auf dem Schlossplatz findet jedes Jahr im August das Royal Edinburgh Military Tattoo statt.
+            <p class="changable">Auf dem Schlossplatz findet jedes Jahr im August das Royal Edinburgh Military Tattoo
+              statt.
               Vor dem Hintergrund des Schlosses, auf dem wechselnde Projektionen gezeigt werden, können die Zuschauer
               auf den Tribünen vor allem Militärmusik mit vielen Dudelsackspielern und den Lone Piper hören.
               An manchen Tagen findet auch ein Feuerwerk statt.</p>
@@ -102,9 +106,10 @@
             <img class="collageElement" src="img/oban_colosseum.jpg" alt="McCaig's Tower in Oban, Innenansicht">
             <img class="collageElement" src="img/ferry_harbour.jpg" alt="Hafen mit einer Fähre in Oban">
           </div>
-          <article class="flexItemBorderless" id="castle">
+          <article class="flexItemBorderless">
             <h3>Oban</h3>
-            <p class="changable">Der im Westen Schottlands gelegene Küstenort Oban ist idealer Ausgangspunkt für Ausflüge zu den der Küste
+            <p class="changable">Der im Westen Schottlands gelegene Küstenort Oban ist idealer Ausgangspunkt für
+              Ausflüge zu den der Küste
               vorgelagerten Inseln Mull, Iona und Staffa. In Oban selbst lohnt ein Spaziergang zum oberhalb der Stadt
               gelegenen McCaig’s Tower, einem unvollendeten Nachbau des Kolosseums in Rom.</p>
           </article>
@@ -158,10 +163,12 @@
           </div>
           <article class="flexItemBorderless">
             <h3>Isle of Mull, Iona und Staffa</h3>
-            <p class="changable">Sehenswert sind auf der Insel Mull die bunte Häuserzeile in Tobermory und das Kloster auf Iona. Besonders
+            <p class="changable">Sehenswert sind auf der Insel Mull die bunte Häuserzeile in Tobermory und das Kloster
+              auf Iona. Besonders
               interessant ist vor allem auch ein Ausflug zur der aus Basaltsäulen bestehenden, unbewohnten Insel Staffa
               mit ihrer Fingalshöhle. Bei einer Wanderung über die Insel kann man an den Klippen hunderte
               Papageientaucher beobachten.</p>
+          </article>
         </div>
       </section>
       <section class="leftBox" id="dundee">
@@ -224,7 +231,8 @@
           </div>
           <article class="flexItemBorderless">
             <h3>Dundee</h3>
-            <p class="changable">Dundee, früher bekannt für seine Jutefabriken, ist heute die „UNESCO City of Design“. Sehenswert sind
+            <p class="changable">Dundee, früher bekannt für seine Jutefabriken, ist heute die „UNESCO City of Design“.
+              Sehenswert sind
               hier das „Royal Research Ship Discovery“, mit dem Scott 1901 bis 1904 eine Südpolarexpedition unternahm
               sowie das <a href="https://www.vam.ac.uk/dundee">Designmuseum V&A Dundee</a> am River Tay, das auch durch
               seine Architektur auffällt. Insbesondere
@@ -233,6 +241,7 @@
               können. Auf dem zentralen Platz der Stadt steht die für Konzerte genutzte <a
                 href="https://www.leisureandculturedundee.com/culture/caird-hall">Caird Hall</a> mit Säulenfassade.
               Einen schönen Blick auf die Stadt und die Tay Bridge hat man vom Aussichtspunkt Dundee Law.</p>
+          </article>
         </div>
       </section>
       <section class="leftBox" id="vorschläge">
@@ -259,9 +268,32 @@
           <textarea id="beschreibung" name="beschreibung" rows="5" cols="100"
             placeholder="Beschreiben Sie kurz wieso diese Stadt sehenswert ist"></textarea>
         </div>
+        <div class="sterneBewertung">
+          Bewertung:
+          <div>
+            <input type="radio" name="Bewertung" id="1stern" value="1">
+            <label for="1stern">⭐</label>
+          </div>
+          <div>
+            <input type="radio" name="Bewertung" id="2sterne" value="2">
+            <label for="2sterne">⭐⭐</label>
+          </div>
+          <div>
+            <input type="radio" name="Bewertung" id="3sterne" value="3">
+            <label for="3sterne">⭐⭐⭐</label>
+          </div>
+          <div>
+            <input type="radio" name="Bewertung" id="4sterne" value="4">
+            <label for="4sterne">⭐⭐⭐⭐</label>
+          </div>
+          <div>
+            <input type="radio" name="Bewertung" id="5sterne" value="5">
+            <label for="5sterne">⭐⭐⭐⭐⭐</label>
+          </div>
+        </div>
         <button class="button" onclick="vorschlagEinsenden()"><b>Absenden</b></button>
         <h3>Vorschläge anderer Nutzer</h3>
-        <div id="nutzervorschlaege"></div>
+        <div id="nutzervorschlaege">Noch keine Vorschläge</div>
       </section>
     </main>
     <section class="sidebar">

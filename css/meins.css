@@ -480,6 +480,15 @@ button:hover {
   margin-bottom: 10px;
 }
 
+.sterneBewertung {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 /* Identifier Deklaration */
 
 

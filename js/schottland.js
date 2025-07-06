@@ -65,12 +65,33 @@ function vorschlagEinsenden() {
     alert("Sie müssen eine Beschreibung eingeben!");
     return;
   }
+  let rating = evaluateRating();
   let post = "<article class='vorschlagFlex'> <div class='vorschlagHeader'> "
-  post += "<h3>" + document.getElementById("stadt").value + "</h3> <p>";
+  post += "<h3>" + document.getElementById("stadt").value + "  | " + rating + "</h3> <p>";
   post += (document.getElementById("name").value == "") ? "" : ("Vorschlag von " + document.getElementById("name").value);
   post += (document.getElementById("datum").value == "") ? "" : (" am " + document.getElementById("datum").value);
   post += "</p> </div>"  + document.getElementById("beschreibung").value  + "</article>";
-  document.getElementById("nutzervorschlaege").innerHTML += post;
+  if (document.getElementById("nutzervorschlaege").innerHTML =="Noch keine Vorschläge") {
+    document.getElementById("nutzervorschlaege").innerHTML = post;
+  } else {
+    document.getElementById("nutzervorschlaege").innerHTML += post;
+  }
+}
+
+function evaluateRating() {
+  let rating;
+  if (document.getElementById("1stern").checked) {
+    rating= "⭐"
+  } else if (document.getElementById("2sterne").checked) {
+    rating="⭐⭐"
+  } else if (document.getElementById("3sterne").checked) {
+    rating="⭐⭐⭐"
+  } else if (document.getElementById("4sterne").checked) {
+    rating="⭐⭐⭐⭐"
+  } else if (document.getElementById("5sterne").checked) {
+    rating="⭐⭐⭐⭐⭐"
+  }
+  return rating;
 }
 
 function changeFontSize(val) {
