@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    Für minimale Responsivität! Immer dazu tun! Anpassung an Bildschrimgröße! -->
+    <title>Entdecke Schottland</title>
+    <link rel="icon" type="image/x-icon" href="img/Favicon.jpg">
+    <link rel="stylesheet" href="css/meins.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <script src="./js/schottland.js" defer></script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>
+            <h1 class="banner">Landschaften</h1>
+        </header>
+        <nav class="navItem">
+            <div class="logoHead">
+                <a href="index.html">
+                    <img src="img/Favicon.jpg" alt="Schottlandflagge">
+                    <h3>Entdecke Schottland</h3>
+                </a>
+            </div>
+            <div class="topnav">
+                <a href="./index.html">
+                    <div class="navCatTop"><span class="material-symbols-outlined">home</span> Start </div>
+                </a>
+                <a href="./stadt.html">
+                    <div class="navCatTop"><span class="material-symbols-outlined">location_city</span> Städte </div>
+                </a>
+                <a href="./landschaften.html">
+                    <div class="navCatTop"> <span class="material-symbols-outlined">landscape</span> Landschaften </div>
+                </a>
+                <a href="#contact">
+                    <div class="navCatTop"><span class="material-symbols-outlined">wand_stars</span> Harry Potter 
+                    </div>
+                </a>
+            </div>
+            <div class="fontSizeSelection">
+                <label for="fontSize">Schriftgröße: </label>
+                <select id="fontSize" onchange="changeFontSize(this.value)">
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </nav>
+
+        <!--Main-->
+        <main>
+            <div id="introS" class="leftBox">
+                <p class="changable">Hier finden Sie viele schöne Landschaften in Schottland mit ein paar Informationen
+                    dazu.<br> Bitte beachten Sie, dass Sie dem Wetter und dem Gelände angepasste Kleidung mitnehemen
+                    sollten sowie bei längeren Wanderungen ausreichend Verpflegung.
+                </p>
+            </div>
+            <section class="leftBox" id="steall-falls">
+                <h2>Steall Waterfalls</h2>
+                <div class="articleFlex">
+                    <div class="slideshow">
+                        <!-- Slideshow container -->
+                        <div class="slideshow-container">
+
+                            <!-- Full-width images with number and caption text -->
+                            <div class="mySlides fade">
+                                <div class="numbertext">1 / 6</div>
+                                <img src="img/steall_waterfalls.jpg"
+                                    alt="Steall Waterfall (ein hoher Wasserfall an einem Berg)" style="width:100%">
+                                <div class="text">Steall Waterfall</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">2 / 6</div>
+                                <img src="img/steall_falls_wanderweg.jpg"
+                                    alt="Wanderweg zu den Steall Falls (ein steiniger Weg mit Bäumen an der Seite)"
+                                    style="width:100%">
+                                <div class="text">Wanderweg zu den Steall Falls</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">3 / 6</div>
+                                <img src="img/steal_falls_blumen.jpg"
+                                    alt="bunte Blumen am Wegesrand des Wanderwegs zu den Steall Falls"
+                                    style="width:100%">
+                                <div class="text">Blumen am Wegesrand</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">4 / 6</div>
+                                <img src="img/steallWaterfallsHikingTrail.jpg"
+                                    alt="Aussicht vom Wanderweg zu den Steall Falls (eine Klippe mit Bäumen und Bergen in der Entfernung)"
+                                    style="width:100%">
+                                <div class="text">Aussicht vom Wanderweg zu den Steall Falls</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">5 / 6</div>
+                                <img src="img/steall_falls_berge_mit_sonne.jpg"
+                                    alt="Aussicht auf Berge, die eine Wiese umrunden. Die Sonne scheint knapp über die Berge."
+                                    style="width:100%">
+                                <div class="text">Sonnige Aussicht auf die Berge</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">6 / 6</div>
+                                <img src="img/steall_falls_fluss.jpg"
+                                    alt="Der Fluss an den Steall Falls mit Bergen im Hintergrund" style="width:100%">
+                                <div class="text">Der Fluss an den Steall Falls</div>
+                            </div>
+
+                            <!-- Next and previous buttons -->
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+                        <br>
+
+                        <!-- The dots/circles -->
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <span class="dot" onclick="currentSlide(6)"></span>
+                        </div>
+                    </div>
+                    <article class="flexItemBorderless">
+                        <h3>Die Steall Falls neben dem Ben Nevis</h3>
+                        <p class="changable">Der mit 120m zweihöchste Wasserfall Schottlands befindet sich im Glen Nevis
+                            gegenüber dem Ben Nevis. Der Wanderweg zum Wasserfall führt über eine Dreiseilbrücke über
+                            den Fluss. Die Steall Falls dienten auch als Kulisse für Harry Potter Filme, besonders für
+                            die Verfilmung von „Harry Potter und der Feuerkelch“.</p>
+                    </article>
+                </div>
+            </section>
+            <section class="leftBox" id="samye-ling">
+                <h2>Samye Ling</h2>
+                <div class="articleFlex">
+                    <div class="collage">
+                        <img class="collageElement" src="img/samye-ling-buddha.JPG"
+                            alt="ein goldener Buddha auf einem weißen Podest in einem See in Samye Ling">
+                        <img class="collageElement" src="img/samye-ling-Haupttempel.jpg"
+                            alt="Die Vorderseite des Haupttempels in Samye Ling, ein tibetisches Kloster">
+                        <img class="collageElement" src="img/samye-ling-tor.jpg"
+                            alt="ein großes rotes Tor mit goldenen Verzierungen in Samye Ling">
+                        <img class="collageElement" src="img/samye-ling-stuppa.JPG" alt="Die Stuppa in Samye Ling">
+                    </div>
+                    <article class="flexItemBorderless">
+                        <h3>Samye Ling</h3>
+                        <p class="changable">Samye Ling ist das erste tibetisch-buddhistische Kloster in Europa und
+                            befindet sich in
+                            Eskdalemuir. Ein mit Gebetsfahnen gesäumter Weg führt zunächst zur Siegesstupa. Vorbei am
+                            Butterlampenhaus
+                            und dem Haus der Gebetsmühlen gelangt man zum Tibetischen Tempel, in dem man auch an den
+                            Gebeten und
+                            Meditationen der Mönche teilnehmen kann. Das Kloster verfügt über ein Gästehaus, in dem
+                            Übernachtungen
+                            möglich sind und Touristen können an Kursen teilnehmen. Durch das dem Weltfrieden gewidmete
+                            Befreiungstor
+                            verlässt man schließlich die Klosteranlage.</p>
+                        <a href="https://www.edintattoo.co.uk/">Webseite von Samye Ling</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Vorschläge -->
+            <section class="leftBox" id="vorschläge">
+                <h2>Vorschläge</h2>
+                <p>Sie waren schonmal in Schottland und haben einen Vorschlag, welchen landschaftlich schönen Ort man
+                    besuchen sollte? Füllen
+                    Sie das
+                    Formular aus und wir werden Ihren Vorschlag gegebenenfalls demnächst hinzufügen! </p>
+                <h3 id="hinzufügen">Vorschlag hinzufügen</h3>
+                <div class="articleFlex">
+                    <div class="eingabeFeld">
+                        <label for="name">Name :</label>
+                        <input type="text" id="name" name="name" placeholder="Ihr Name (optional)">
+                    </div>
+                    <div class="eingabeFeld">
+                        <label for="stadt">Stadt :</label>
+                        <input type="text" id="stadt" name="stadt" placeholder="Stadt">
+                    </div>
+                    <div class="eingabeFeld">
+                        <label for="datum">Datum des Eintrags:</label>
+                        <input type="date" id="datum" name="datum">
+                    </div>
+                </div>
+                <div class="eingabeFeld">
+                    <label for="beschreibung">Beschreibung:</label>
+                    <textarea id="beschreibung" name="beschreibung" rows="5" cols="100"
+                        placeholder="Beschreiben Sie kurz wieso diese Stadt sehenswert ist"></textarea>
+                </div>
+                <div class="sterneBewertung">
+                    Bewertung:
+                    <div>
+                        <input type="radio" name="Bewertung" id="1stern" value="1">
+                        <label for="1stern">⭐</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="Bewertung" id="2sterne" value="2">
+                        <label for="2sterne">⭐⭐</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="Bewertung" id="3sterne" value="3">
+                        <label for="3sterne">⭐⭐⭐</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="Bewertung" id="4sterne" value="4">
+                        <label for="4sterne">⭐⭐⭐⭐</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="Bewertung" id="5sterne" value="5">
+                        <label for="5sterne">⭐⭐⭐⭐⭐</label>
+                    </div>
+                </div>
+                <button class="button" onclick="vorschlagEinsenden()"><b>Absenden</b></button>
+                <h3>Vorschläge anderer Nutzer</h3>
+                <div id="nutzervorschlaege">Noch keine Vorschläge</div>
+            </section>
+        </main>
+        <section class="sidebar">
+            <h2>Navigation</h2>
+            <nav class="sidenav">
+                <a href="#steall-falls" class="navCat"> <span class="material-symbols-outlined">waterfall_chart</span>
+                    Steall Falls
+                </a>
+                <a href="#vorschläge" class="navCat"><span class="material-symbols-outlined">lightbulb</span>
+                    Vorschläge</a>
+                <a href="#hinzufügen" class="navCatUnder"><span class="material-symbols-outlined">add</span>
+                    hinzufügen</a>
+                <a href="#nutzervorschlaege" class="navCatUnder"><span class="material-symbols-outlined">search</span>
+                    ansehen</a>
+            </nav>
+            <h2>Quellen</h2>
+            <p class="center">Bilder: André Abert
+                <br>Informationen:
+                <br>Baedeker Schottland
+                <br>Wikipedia
+            </p>
+        </section>
+        <footer class="leftBoxFlex">
+            <div class="navCatTop"><img class="icon" src="img/Favicon.jpg" alt="Schottische Flagge"> Entdecke Schottland
+            </div>
+            <div>Kontakt: <a href="mailto:aabert@smail.uni-koeln.de">aabert@smail.uni-koeln.de </a></div>
+            <div class="navCatTop"> © André Abert 2025 <img class="icon" src="img/Weltkugel.png" alt="Weltkugel"></div>
+        </footer>
+    </div>
+</body>
+
+</html>
