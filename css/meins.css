@@ -5,6 +5,7 @@
 }
 html {
   scroll-behavior: smooth;
+  
 }
 
 .topnav {
@@ -302,7 +303,8 @@ figcaption {
     justify-content: space-evenly;
 }
 
-.articleFlex, .vorschlagFlex {
+.articleFlex, .vorschlagFlex, 
+.articleFlexDoubleMedia {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -320,6 +322,22 @@ figcaption {
     align-items: center;
     padding-top: 10px;
     flex-direction: row-reverse;
+}
+
+.articleFlexDoubleMedia {
+  flex-direction: column;
+}
+
+.articleFlexDoubleMedia .flexItemBorderless {
+  max-width: 80%;
+}
+
+.doubleMedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .flexItem {
