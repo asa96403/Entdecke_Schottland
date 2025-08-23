@@ -3,43 +3,45 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
-  
+
 }
 
 .topnav {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-right: white solid 1px;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    border-left: solid 1px #ffffff;
-    transition: 0.3s;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #0d8899;
-    color: white;
-  }
-  /*Slideshow*/
-  
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: white solid 1px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-left: solid 1px #ffffff;
+  transition: 0.3s;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #0d8899;
+  color: white;
+}
+
+/*Slideshow*/
+
 /* Slideshow container */
 .slideshow-container {
   position: relative;
@@ -51,12 +53,14 @@ html {
 }
 
 /* Hide the images by default */
-.mySlides , .mySlides2 {
+.mySlides,
+.mySlides2 {
   display: none;
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -79,8 +83,9 @@ html {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -105,7 +110,8 @@ html {
 }
 
 /* The dots/bullets/indicators */
-.dot, .dot2 {
+.dot,
+.dot2 {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -116,7 +122,9 @@ html {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover, .dot2:hover {
+.active,
+.dot:hover,
+.dot2:hover {
   background-color: #717171;
 }
 
@@ -127,28 +135,84 @@ html {
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-  /* Element Deklaration */
-  body {
-      margin: 5px;
-      background-color: #000000;
-      color: #ddd;
-      font-family: "Open Sans", sans-serif;
+  from {
+    opacity: .4
   }
 
+  to {
+    opacity: 1
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(10, 3, 41);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #010318;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 10px;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Element Deklaration */
+body {
+  margin: 5px;
+  background-color: #000000;
+  color: #ddd;
+  font-family: "Open Sans", sans-serif;
+}
+
 img.header {
-    border-radius: 5px;
-    border-color: black;
-    width: 100%;
+  border-radius: 5px;
+  border-color: black;
+  width: 100%;
 }
+
 img.inText {
-    border-radius: 5px;
-    width: 100%;
-    border: white solid 1px;
+  border-radius: 5px;
+  width: 100%;
+  border: white solid 1px;
 }
+
 img.article {
   max-width: 35%;
   border-radius: 5px;
@@ -156,22 +220,22 @@ img.article {
   margin-bottom: 5px;
 }
 
-img.icon{
-    height: 20px;
+img.icon {
+  height: 20px;
 }
 
-header{
-   grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column: 1 / span 2;
-    background-image: url(../img/Banner.png);
-    background-position: center;
-    background-size: cover;
-    padding: 1.5%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5px;
-    margin-top: 5px;
+header {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column: 1 / span 2;
+  background-image: url(../img/Banner.png);
+  background-position: center;
+  background-size: cover;
+  padding: 1.5%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 footer {
@@ -198,6 +262,7 @@ h2 {
   text-decoration: underline;
   text-align: center;
 }
+
 a {
   color: aqua;
 }
@@ -218,24 +283,25 @@ figcaption {
   grid-template-rows: 55px 10% auto 80px;
   column-gap: 1%;
 }
+
 /* Navigation*/
 .navItem {
-   grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column: 1 / span 2;
-    position: sticky ;
-    left: 0;
-    top: 0;
-    z-index: 10000;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    border-radius: 5px;
-    border: solid cyan 2px;
-    background-color: #060d4e;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column: 1 / span 2;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 5px;
+  border: solid cyan 2px;
+  background-color: #060d4e;
 }
 
-.logoHead a{
+.logoHead a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -288,40 +354,41 @@ figcaption {
 }
 
 .leftBox {
-     border: solid rgb(255, 255, 255) 1px;
-    border-radius: 5px;
-    background-color: #041644;
-    padding: 10px;
-    grid-row: 3/3;
-    grid-column: 1/1;
-    margin-bottom: 1%;
+  border: solid rgb(255, 255, 255) 1px;
+  border-radius: 5px;
+  background-color: #041644;
+  padding: 10px;
+  grid-row: 3/3;
+  grid-column: 1/1;
+  margin-bottom: 1%;
 }
 
 .leftBoxFlex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.articleFlex, .vorschlagFlex, 
+.articleFlex,
+.vorschlagFlex,
 .articleFlexDoubleMedia {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 3px;
-    align-items: center;
-    border-top: 1px cyan solid;
-    padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 3px;
+  align-items: center;
+  border-top: 1px cyan solid;
+  padding-top: 10px;
 }
 
 .articleFlexRight {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 3px;
-    align-items: center;
-    padding-top: 10px;
-    flex-direction: row-reverse;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 3px;
+  align-items: center;
+  padding-top: 10px;
+  flex-direction: row-reverse;
 }
 
 .articleFlexDoubleMedia {
@@ -374,7 +441,7 @@ figcaption {
   border-radius: 5px;
 }
 
-.banner{
+.banner {
   font-weight: bolder;
   font-size: 50px;
   color: #ffffff;
@@ -389,7 +456,7 @@ figcaption {
   border-left: 22px solid red;
   padding: 5px;
   border-radius: 5px;
-  box-shadow: white 2px 2px 2px ;
+  box-shadow: white 2px 2px 2px;
 }
 
 .collage {
@@ -404,24 +471,24 @@ figcaption {
 .collageElement {
   width: 49%;
   border-radius: 3px;
-  margin:0px;
+  margin: 0px;
   border: white solid 1px;
 }
 
 /* Icons*/
 .material-symbols-outlined {
   font-variation-settings:
-  'FILL' 1,
-  'wght' 500,
-  'GRAD' 0,
-  'opsz' 100
+    'FILL' 1,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 100
 }
 
 .navCat {
   display: flex;
   justify-content: center;
   column-gap: 5px;
-  width:90%;
+  width: 90%;
   margin: 2%;
   border: solid white 1px;
   border-radius: 5px;
@@ -437,7 +504,7 @@ figcaption {
   column-gap: 5px;
   border-left: solid 2px white;
   margin-left: 15%;
-  width:75%;
+  width: 75%;
   margin-top: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
@@ -516,8 +583,21 @@ button:hover {
   margin-right: 10%;
 }
 
+.wegberechnung {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wegberechnung div {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  width: 80%;
+  justify-content: center;
+}
+
 /* Identifier Deklaration */
 #introS {
   text-align: center;
 }
-

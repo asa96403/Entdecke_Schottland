@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    Für minimale Responsivität! Immer dazu tun! Anpassung an Bildschrimgröße! -->
+    <title>Entdecke Schottland</title>
+    <link rel="icon" type="image/x-icon" href="img/Favicon.jpg">
+    <link rel="stylesheet" href="css/meins.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <script src="./js/reisePlaner.js" defer></script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>
+            <h1 class="banner">Harry Potter</h1>
+        </header>
+        <nav class="navItem">
+            <div class="logoHead">
+                <a href="index.html">
+                    <img src="img/Favicon.jpg" alt="Schottlandflagge">
+                    <h3>Entdecke Schottland</h3>
+                </a>
+            </div>
+            <div class="topnav">
+                <a href="./index.html">
+                    <div class="navCatTop"><span class="material-symbols-outlined">home</span> Start </div>
+                </a>
+                <a href="./stadt.html">
+                    <div class="navCatTop"><span class="material-symbols-outlined">location_city</span> Städte </div>
+                </a>
+                <a href="./landschaften.html">
+                    <div class="navCatTop"> <span class="material-symbols-outlined">landscape</span> Landschaften </div>
+                </a>
+                <a href="./harryPotter.html">
+                    <div class="navCatTop"><span class="material-symbols-outlined">wand_stars</span> Harry Potter
+                    </div>
+                </a>
+            </div>
+            <div class="fontSizeSelection">
+                <label for="fontSize">Schriftgröße: </label>
+                <select id="fontSize" onchange="changeFontSize(this.value)">
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </nav>
+
+        <!--Main-->
+        <main>
+            <div id="introS" class="leftBox">
+                <p class="changable">In Schottland und an der Grenze zu England liegen verschiedene Drehorte der
+                    weltberühmten Harry Potter Filme.<br>
+                    Vor allem für Fans von Harry Potter sind diese Orte unverzichtbar.
+                </p>
+            </div>
+            <section class="leftBox" id="glenfinnan-viadukt">
+                <h2>Reiseplaner</h2>
+                <h3 class="centeredText">Berechne den kürzesten Weg von einem Start zu einem Zielort! <br>Wähle dazu
+                    zuerst den Start- und
+                    Zielort aus und drücke dann Start!</h3>
+                <p class="centeredText">Hinweis: Der kürzeste Weg wird auf Grudlage der Entfernungen zwischen den
+                    erwähnten Orten berechnet.<br> Die Werte der Entfernungen sind in Meilen gegeben und wurden mit
+                    Google Maps meist durch Autorouten ermittelt. Verkehrslagen sind nicht inbegriffen!</p>
+                <section class="wegberechnung">
+                    <div>
+                        <select id="startWahl">
+                        </select>
+                        <select id="zielWahl">s
+                        </select>
+                    </div>
+                    <button onclick="berechneWeg()">Start!</button>
+                    <p id="ergebnis"></p>
+                </section>
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Sie müssen einen Start- und Zielort auswählen!</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <section class="sidebar">
+            <h2>Navigation</h2>
+            <nav class="sidenav">
+                <a href="#glenfinnan-viadukt" class="navCat"> <span class="material-symbols-outlined">landscape</span>
+                    Glenfinnan-Viadukt
+                </a>
+                <a href="#vorschläge" class="navCat"><span class="material-symbols-outlined">lightbulb</span>
+                    Vorschläge</a>
+                <a href="#hinzufügen" class="navCatUnder"><span class="material-symbols-outlined">add</span>
+                    hinzufügen</a>
+                <a href="#nutzervorschlaege" class="navCatUnder"><span class="material-symbols-outlined">search</span>
+                    ansehen</a>
+            </nav>
+            <h2>Quellen</h2>
+            <p class="center">Bilder: André Abert
+                <br>Informationen:
+                <br>Baedeker Schottland
+                <br>Wikipedia
+            </p>
+        </section>
+        <footer class="leftBoxFlex">
+            <div class="navCatTop"><img class="icon" src="img/Favicon.jpg" alt="Schottische Flagge"> Entdecke Schottland
+            </div>
+            <div>Kontakt: <a href="mailto:aabert@smail.uni-koeln.de">aabert@smail.uni-koeln.de </a></div>
+            <div class="navCatTop"> © André Abert 2025 <img class="icon" src="img/Weltkugel.png" alt="Weltkugel"></div>
+        </footer>
+    </div>
+</body>
+
+</html>
