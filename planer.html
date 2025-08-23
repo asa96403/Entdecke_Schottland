@@ -17,7 +17,7 @@
 <body>
     <div class="grid-container">
         <header>
-            <h1 class="banner">Harry Potter</h1>
+            <h1 class="banner">Reiseplaner</h1>
         </header>
         <nav class="navItem">
             <div class="logoHead">
@@ -40,6 +40,10 @@
                     <div class="navCatTop"><span class="material-symbols-outlined">wand_stars</span> Harry Potter
                     </div>
                 </a>
+                <a href="./planer.html">
+                    <div class="navCatTop"><span class="material-symbols-outlined">route</span> Reiseplaner
+                    </div>
+                </a>
             </div>
             <div class="fontSizeSelection">
                 <label for="fontSize">Schriftgröße: </label>
@@ -56,18 +60,16 @@
         <!--Main-->
         <main>
             <div id="introS" class="leftBox">
-                <p class="changable">In Schottland und an der Grenze zu England liegen verschiedene Drehorte der
-                    weltberühmten Harry Potter Filme.<br>
-                    Vor allem für Fans von Harry Potter sind diese Orte unverzichtbar.
+                <p class="changable">Hiermit kann die kürzeste Route von einem Ort zu einem anderen basierend auf der Strecke berechnet werden.
                 </p>
             </div>
-            <section class="leftBox" id="glenfinnan-viadukt">
+            <section class="leftBox" id="planer">
                 <h2>Reiseplaner</h2>
                 <h3 class="centeredText">Berechne den kürzesten Weg von einem Start zu einem Zielort! <br>Wähle dazu
                     zuerst den Start- und
                     Zielort aus und drücke dann Start!</h3>
-                <p class="centeredText">Hinweis: Der kürzeste Weg wird auf Grudlage der Entfernungen zwischen den
-                    erwähnten Orten berechnet.<br> Die Werte der Entfernungen sind in Meilen gegeben und wurden mit
+                <p class="centeredText"><u>Hinweis:</u><br> Der kürzeste Weg wird nur auf Grundlage der Entfernungen zwischen den
+                    erwähnten Orten berechnet mit einem Bellmann-Ford-Algorithmus.<br> Die Werte der Entfernungen sind in Meilen gegeben und wurden mit
                     Google Maps meist durch Autorouten ermittelt.<br>Verkehrslagen sind nicht inbegriffen!</p>
                 <section class="wegberechnung">
                     <div>
@@ -93,15 +95,9 @@
         <section class="sidebar">
             <h2>Navigation</h2>
             <nav class="sidenav">
-                <a href="#glenfinnan-viadukt" class="navCat"> <span class="material-symbols-outlined">landscape</span>
-                    Glenfinnan-Viadukt
+                <a href="#planer" class="navCat"> <span class="material-symbols-outlined">route</span>
+                    Reiseplaner
                 </a>
-                <a href="#vorschläge" class="navCat"><span class="material-symbols-outlined">lightbulb</span>
-                    Vorschläge</a>
-                <a href="#hinzufügen" class="navCatUnder"><span class="material-symbols-outlined">add</span>
-                    hinzufügen</a>
-                <a href="#nutzervorschlaege" class="navCatUnder"><span class="material-symbols-outlined">search</span>
-                    ansehen</a>
             </nav>
             <h2>Quellen</h2>
             <p class="center">Bilder: André Abert

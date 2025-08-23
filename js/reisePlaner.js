@@ -37,24 +37,38 @@ function konvertiereGraph(g) {
 //Bellmann-Ford Algorithmus (verbesserte Version) zum ermitteln von kürzesten Wegen
 function bellmannFord(g, s) { //g::Graph als Adjaszenzliste mit eingehenden Kanten , s: Index des Startknotens
     let In= konvertiereGraph(g); //speichere in In die eingehende Adjaszenzliste
-    console.log(In);
     let d= [];
-    for (let i = 0; i < orte.length; i++) {
-        d.push(1000000) //Dummy-Wert 1 Mio
+    let myParent = [];
+    //Initialisierung myParent Arrays, die den Pfad zu dem Konten enthalten sollen
+    for (let i=0; i<orte.length; i++) {
+        myParent.push([]);
     }
-    d[s]=0
-    console.log(d);
-    console.log(orte.length);
-    for (let k=0; k<(orte.length-1); k++) {
-        for (let v=0; v<orte.length; v++) {
-            for (let s=0; s<In[v].length; s++) {
-                if (d[In[v][s][0]] + In[v][s][1]<d[v]) {
-                    d[v] = d[In[v][s][0]] + In[v][s][1];
-                }
-            }
+    //initialisierung d-Werte Array (entfernungswerte zum Startknoten)
+    for (let j=0; j<(orte.length-1); j++) {
+        d.push([])
+        for (let i = 0; i < orte.length; i++) {
+            d[j].push(1000000) //Dummy-Wert 1 Mio
         }
     }
-    return d;
+    //Setzen bekannter Entfernung (Startknoten)
+    d[0][s]=0
+    //Setzen der kürzesten Entfernung zum Startknoten mit maximal k Kanten und Speichern in Tabelle
+    for (let k=1; k<(orte.length-1); k++) { //+1 Kante
+        for (let v=0; v<orte.length; v++) { //Prüfen für alle Knoten, ob kürzerer Weg möglich über eingehende Kante
+            min = d[k-1][v];
+            for (let s=0; s<In[v].length; s++) {
+                if (d[k-1][In[v][s][0]] + In[v][s][1]<min) {
+                    min = d[k-1][In[v][s][0]] + In[v][s][1];
+                    console.log("Kante von " +  In[v][s][0] + " in " + v);
+                    myParent[v]=myParent[(In[v][s][0])].slice();
+                    myParent[v].push(v);
+                }
+            }
+            d[k][v]=min;
+        }
+    }
+    let tabellen= [d, myParent];
+    return tabellen;
 }
 
 function verarbeiteWeg(start, ziel) {
@@ -63,12 +77,14 @@ function verarbeiteWeg(start, ziel) {
     for (let i=0; i<orte.length; i++) {
         if(orte[i]==start) {
             iStart=i;
-        } else if (orte[i]==ziel) {
+        }
+         if (orte[i]==ziel) {
             iZiel=i;
         }
     }
     let d= bellmannFord(graph, iStart);
-    return(d[iZiel]);
+    let rueckgabe=[d[0][orte.length-2][iZiel], d[1][iZiel]]
+    return(rueckgabe);
 }
 
 function berechneWeg(){
@@ -78,8 +94,19 @@ function berechneWeg(){
         modal.style.display = "block";
         return;
     }
-    wegLänge=verarbeiteWeg(start, ziel);
-    document.getElementById("ergebnis").innerHTML="Der kürzeste Weg von " + start + " nach " + ziel + " ist " + wegLänge + " Meilen lang."
+    weg=verarbeiteWeg(start, ziel);
+    let result= "Der kürzeste Weg von " + start + " nach " + ziel + " ist " + weg[0] + " Meilen lang.";
+    result += "<br>Verlauf des Weges: " + start + wegDarstellung(weg[1]);
+    console.log(weg);
+    document.getElementById("ergebnis").innerHTML=result;
+}
+
+function wegDarstellung(nummern) {
+    let res="";
+    for (let i=0; i<nummern.length; i++) {
+        res += " -> " + orte[nummern[i]];
+    }
+    return res;
 }
 
 function setup() {
