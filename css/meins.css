@@ -587,6 +587,7 @@ button:hover {
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 20px;
 }
 
 .wegberechnung div {
@@ -595,6 +596,27 @@ button:hover {
   gap: 15px;
   width: 80%;
   justify-content: center;
+}
+
+.wegberechnung div select {
+  padding: 5px;
+  border-radius: 20px;
+  background-color: #020522;
+  color: cyan;
+  border: solid cyan 2px;
+}
+
+.wegberechnung button {
+  border: solid cyan 2px;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #020522;
+  color: cyan;
+  font-size: 1em;
+  margin: 0px;
 }
 
 /* Identifier Deklaration */
