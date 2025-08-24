@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <script src="./js/reisePlaner.js" defer></script>
+    <script src="js/schottland.js"></script>
 </head>
 
 <body>
@@ -46,6 +47,11 @@
                 </a>
             </div>
             <div class="fontSizeSelection">
+                <label for="theme">Theme: </label>
+                <select id="theme" onchange="changeTheme(this.value)">
+                    <option value="dark">Dunkel</option>
+                    <option value="light">Hell</option>
+                </select>
                 <label for="fontSize">Schriftgröße: </label>
                 <select id="fontSize" onchange="changeFontSize(this.value)">
                     <option value="12">12</option>
@@ -60,7 +66,8 @@
         <!--Main-->
         <main>
             <div id="introS" class="leftBox">
-                <p class="changable">Hiermit kann die kürzeste Route von einem Ort zu einem anderen basierend auf der Strecke berechnet werden.
+                <p class="changable">Hiermit kann die kürzeste Route von einem Ort zu einem anderen basierend auf der
+                    Strecke berechnet werden.
                 </p>
             </div>
             <section class="leftBox" id="planer">
@@ -68,15 +75,24 @@
                 <h3 class="centeredText">Berechne den kürzesten Weg von einem Start zu einem Zielort! <br>Wähle dazu
                     zuerst den Start- und
                     Zielort aus und drücke dann Start!</h3>
-                <p class="centeredText"><u>Hinweis:</u><br> Der kürzeste Weg wird nur auf Grundlage der Entfernungen zwischen den
-                    erwähnten Orten berechnet mit einem Bellmann-Ford-Algorithmus.<br> Die Werte der Entfernungen sind in Meilen gegeben und wurden mit
-                    Google Maps meist durch Autorouten ermittelt.<br>Verkehrslagen sind nicht inbegriffen!</p>
+                <p class="centeredText"><u>Hinweis:</u><br> Der kürzeste Weg wird nur auf Grundlage der Entfernungen
+                    zwischen den
+                    erwähnten Orten berechnet mit einem Bellman-Ford-Algorithmus.<br> Die Werte der Entfernungen sind in
+                    Meilen gegeben und wurden mit
+                    Google Maps meist durch Autorouten ermittelt.<br> Die Route beinhaltet ausschließlich erwähnte Orte.
+                    Verkehrslagen sind nicht inbegriffen!</p>
                 <section class="wegberechnung">
                     <div>
-                        <select id="startWahl">
-                        </select>
-                        <select id="zielWahl">s
-                        </select>
+                        <div>
+                            <label for="startWahl">Startort:</label>
+                            <select id="startWahl">
+                            </select>
+                        </div>
+                        <div>
+                            <label for="zielWahl">Zielort:</label>
+                            <select id="zielWahl">
+                            </select>
+                        </div>
                     </div>
                     <button onclick="berechneWeg()">Start!</button>
                     <p id="ergebnis"></p>

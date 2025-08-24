@@ -46,6 +46,11 @@
         </a>
       </div>
       <div class="fontSizeSelection">
+        <label for="theme">Theme: </label>
+        <select id="theme" onchange="changeTheme(this.value)">
+          <option value="dark">Dunkel</option>
+          <option value="light">Hell</option>
+        </select>
         <label for="fontSize">Schriftgröße: </label>
         <select id="fontSize" onchange="changeFontSize(this.value)">
           <option value="12">12</option>
@@ -184,35 +189,42 @@
 
               <!-- Full-width images with number and caption text -->
               <div class="mySlides2 fade">
-                <div class="numbertext">1 / 5</div>
+                <div class="numbertext">1 / 6</div>
                 <img src="img/dundee_ship.jpg" alt="Royal Search Ship Discovery, ein Segelshiff in einem trockenen Dock"
                   style="width:100%">
                 <div class="text">Royal Search Ship Discovery</div>
               </div>
 
               <div class="mySlides2 fade">
-                <div class="numbertext">2 / 5</div>
+                <div class="numbertext">2 / 6</div>
                 <img src="img/dundee_v&a.jpg" alt="V&A Designmuseum, ein modernes Gebäude verkleidet mit Metallstangen"
                   style="width:100%">
                 <div class="text">V&A Designmuseum</div>
               </div>
 
               <div class="mySlides2 fade">
-                <div class="numbertext">3 / 5</div>
+                <div class="numbertext">3 / 6</div>
                 <img src="img/dundee_science_center.jpg"
-                  alt="Dundee Science Center, ein interaktives Wissenschaftszentrum" style="width:100%">
+                  alt="Discovery Point der RRS Discovery" style="width:100%">
+                <div class="text">Discovery Point, RRS Discovery</div>
+              </div>
+
+              <div class="mySlides2 fade">
+                <div class="numbertext">4 / 6</div>
+                <img src="https://www.dundeesciencecentre.org.uk/wp-content/uploads/DSC-Banner-Imagev2-2048x1024.jpg"
+                  alt="Dundee Science Center Frontansicht" style="width:100%">
                 <div class="text">Dundee Science Center</div>
               </div>
 
               <div class="mySlides2 fade">
-                <div class="numbertext">4 / 5</div>
+                <div class="numbertext">5 / 6</div>
                 <img src="img/dundee_caird_hall.jpg"
                   alt="Caird Hall, ein großes Gebäude aus Sandstein mit Säulenfassade" style="width:100%">
                 <div class="text">Caird Hall</div>
               </div>
 
               <div class="mySlides2 fade">
-                <div class="numbertext">5 / 5</div>
+                <div class="numbertext">6 / 6</div>
                 <img src="img/dundee_law_view.jpg" alt="Ausblick von Dundee Law auf die Stadt Dundee und die Tay Bridge"
                   style="width:100%">
                 <div class="text">Dundee Law</div>
@@ -231,6 +243,7 @@
               <span class="dot2" onclick="currentSlide2(3)"></span>
               <span class="dot2" onclick="currentSlide2(4)"></span>
               <span class="dot2" onclick="currentSlide2(5)"></span>
+              <span class="dot2" onclick="currentSlide2(6)"></span>
             </div>
           </div>
           <article class="flexItemBorderless">
@@ -276,7 +289,7 @@
 
       <section class="leftBox" id="vorschläge">
         <h2>Vorschläge</h2>
-        <p>Sie waren schonmal in Schottland und haben einen Vorschlag, welche Stadt man besuchen sollte? Füllen Sie das
+        <p>Sie waren schon einmal in Schottland und haben einen Vorschlag, welche Stadt man besuchen sollte? Füllen Sie das
           Formular aus und wir werden Ihren Vorschlag gegebenenfalls demnächst hinzufügen! </p>
         <h3 id="hinzufügen">Vorschlag hinzufügen</h3>
         <div class="articleFlex">
@@ -296,7 +309,7 @@
         <div class="eingabeFeld">
           <label for="beschreibung">Beschreibung:</label>
           <textarea id="beschreibung" name="beschreibung" rows="5" cols="100"
-            placeholder="Beschreiben Sie kurz wieso diese Stadt sehenswert ist"></textarea>
+            placeholder="Beschreiben Sie kurz, wieso diese Stadt sehenswert ist"></textarea>
         </div>
         <div class="sterneBewertung">
           Bewertung:

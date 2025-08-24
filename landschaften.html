@@ -38,7 +38,7 @@
                     <div class="navCatTop"> <span class="material-symbols-outlined">landscape</span> Landschaften </div>
                 </a>
                 <a href="./harryPotter.html">
-                    <div class="navCatTop"><span class="material-symbols-outlined">wand_stars</span> Harry Potter 
+                    <div class="navCatTop"><span class="material-symbols-outlined">wand_stars</span> Harry Potter
                     </div>
                 </a>
                 <a href="./planer.html">
@@ -47,6 +47,11 @@
                 </a>
             </div>
             <div class="fontSizeSelection">
+                <label for="theme">Theme: </label>
+                <select id="theme" onchange="changeTheme(this.value)">
+                    <option value="dark">Dunkel</option>
+                    <option value="light">Hell</option>
+                </select>
                 <label for="fontSize">Schriftgröße: </label>
                 <select id="fontSize" onchange="changeFontSize(this.value)">
                     <option value="12">12</option>
@@ -137,7 +142,7 @@
                         </div>
                     </div>
                     <article class="flexItemBorderless">
-                        <h3>Die Steall Falls neben dem Ben Nevis</h3>
+                        <h3>Die Steall Falls am Ben Nevis</h3>
                         <p class="changable">Der mit 120m zweihöchste Wasserfall Schottlands befindet sich im Glen Nevis
                             gegenüber dem Ben Nevis. Der Wanderweg zum Wasserfall führt über eine Dreiseilbrücke über
                             den Fluss. Die Steall Falls dienten auch als Kulisse für Harry Potter Filme, besonders für
@@ -145,7 +150,7 @@
                     </article>
                 </div>
             </section>
-        
+
 
             <!-- Vorschläge -->
             <section class="leftBox" id="vorschläge">

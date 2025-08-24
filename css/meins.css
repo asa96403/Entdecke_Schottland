@@ -6,7 +6,9 @@
 
 html {
   scroll-behavior: smooth;
-
+  --color2: rgb(0, 0, 0); /*#000000*/
+  --color1: cyan;
+  --color3: #020522;
 }
 
 .topnav {
@@ -196,7 +198,7 @@ html {
 /* Element Deklaration */
 body {
   margin: 5px;
-  background-color: #000000;
+  background-color: var(--color2);
   color: #ddd;
   font-family: "Open Sans", sans-serif;
 }
@@ -264,7 +266,7 @@ h2 {
 }
 
 a {
-  color: aqua;
+  color: var(--color1);
 }
 
 figure {
@@ -278,9 +280,9 @@ figcaption {
 /* Klassen Deklarationen */
 .grid-container {
   display: grid;
-  background-color: #000000;
+  background-color: var(--color2);
   grid-template-columns: 79% 20%;
-  grid-template-rows: 55px 10% auto 80px;
+  grid-template-rows: 55px 200px auto 80px;
   column-gap: 1%;
 }
 
@@ -297,7 +299,7 @@ figcaption {
   justify-content: space-between;
   width: 100%;
   border-radius: 5px;
-  border: solid cyan 2px;
+  border: solid var(--color1) 2px;
   background-color: #060d4e;
 }
 
@@ -343,7 +345,9 @@ figcaption {
   justify-content: center;
   align-items: center;
   border-left: white 1px solid;
-  padding: 10px
+  padding: 10px;
+  gap: 5px;
+  color: white;
 }
 
 .sidenav a:hover {
@@ -377,7 +381,7 @@ figcaption {
   justify-content: space-evenly;
   padding: 3px;
   align-items: center;
-  border-top: 1px cyan solid;
+  border-top: 1px var(--color1) solid;
   padding-top: 10px;
 }
 
@@ -448,6 +452,7 @@ figcaption {
   padding: 5px;
   border-radius: 10px;
   backdrop-filter: blur(5px) brightness(50%);
+  height: fit-content;
 }
 
 .warning {
@@ -494,7 +499,7 @@ figcaption {
   border-radius: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
-  color: cyan;
+  color: var(--color1);
   text-decoration: none;
 }
 
@@ -508,7 +513,7 @@ figcaption {
   margin-top: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
-  color: cyan;
+  color: var(--color1);
   text-decoration: none;
 }
 
@@ -519,7 +524,7 @@ figcaption {
 }
 
 .navcat:hover {
-  background-color: #000000;
+  background-color: var(--color2);
 }
 
 .center {
@@ -552,7 +557,7 @@ figcaption {
 
 button {
   margin-left: 10%;
-  border: cyan double 1px;
+  border: var(--color1) double 1px;
   border-radius: 5px;
   padding: 5px
 }
@@ -601,20 +606,20 @@ button:hover {
 .wegberechnung div select {
   padding: 5px;
   border-radius: 20px;
-  background-color: #020522;
-  color: cyan;
-  border: solid cyan 2px;
+  background-color: var(--color3);
+  color: var(--color1);
+  border: solid var(--color1) 2px;
 }
 
 .wegberechnung button {
-  border: solid cyan 2px;
+  border: solid var(--color1) 2px;
   border-radius: 20px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: #020522;
-  color: cyan;
+  background-color: var(--color3);
+  color: var(--color1);
   font-size: 1em;
   margin: 0px;
 }

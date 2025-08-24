@@ -46,6 +46,11 @@
         </a>
       </div>
       <div class="fontSizeSelection">
+        <label for="theme">Theme: </label>
+        <select id="theme" onchange="changeTheme(this.value)">
+          <option value="dark">Dunkel</option>
+          <option value="light">Hell</option>
+        </select>
         <label for="fontSize">Schriftgröße: </label>
         <select id="fontSize" onchange="changeFontSize(this.value)">
           <option value="12">12</option>
@@ -69,7 +74,7 @@
       </div>
       <section class="leftBox" id="firstImpr">
         <h2>Erste Eindrücke</h2>
-        <p class="centeredText">Wähle eine Kachel aus, dessen Name cyan ist, um mehr zu erfahren</p>
+        <p class="centeredText">Wähle eine Kachel aus, deren Name in cyan hervorgehoben ist, um mehr zu erfahren</p>
         <div class="leftBoxFlex">
           <a class="flexItem" href="./harryPotter.html#glennfinnan">
             <figure> <!--für Bilder-->
@@ -194,8 +199,8 @@
         <a href="#highlights" class="navCat"><span class="material-symbols-outlined">star</span> Highlights </a>
       </nav>
       <h2>Hinweise</h2>
-      <div class="warning"> Wichtig: Diese Seite ist noch in Entwicklung und unfertig. Gegebenenfalls funktionieren
-        manche Abschnitte noch nicht richtig.</div>
+      <div class="warning"> Keine aktuellen Hinweise vorhanden!
+      </div>
       <h2>Quellen</h2>
       <p class="center">Bilder und Texte (Soweit nicht anders gekennzeichnet): André Abert
         <br>¹ Baedeker Schottland

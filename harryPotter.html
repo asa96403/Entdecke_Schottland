@@ -46,6 +46,11 @@
                 </a>
             </div>
             <div class="fontSizeSelection">
+                <label for="theme">Theme: </label>
+                <select id="theme" onchange="changeTheme(this.value)">
+                    <option value="dark">Dunkel</option>
+                    <option value="light">Hell</option>
+                </select>
                 <label for="fontSize">Schriftgröße: </label>
                 <select id="fontSize" onchange="changeFontSize(this.value)">
                     <option value="12">12</option>
@@ -138,7 +143,8 @@
             <!-- Vorschläge -->
             <section class="leftBox" id="vorschläge">
                 <h2>Vorschläge</h2>
-                <p class="centeredText">Sie waren schonmal in Schottland und kennen dort weitere Harry Potter Drehorte?<br> Füllen
+                <p class="centeredText">Sie waren schonmal in Schottland und kennen dort weitere Harry Potter
+                    Drehorte?<br> Füllen
                     Sie das
                     Formular aus und wir werden Ihren Vorschlag gegebenenfalls demnächst hinzufügen! </p>
                 <h3 id="hinzufügen">Vorschlag hinzufügen</h3>
