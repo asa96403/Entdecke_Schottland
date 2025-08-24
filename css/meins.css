@@ -331,13 +331,6 @@ figcaption {
   justify-content: center;
 }
 
-#fontSize {
-  background-color: #060d4e;
-  color: white;
-  border: white 1px solid;
-  border-radius: 3px;
-  margin-left: 5px;
-}
 
 .fontSizeSelection {
   height: 100%;
@@ -348,6 +341,14 @@ figcaption {
   padding: 10px;
   gap: 5px;
   color: white;
+}
+
+.fontSizeSelection select {
+  background-color: #060d4e;
+  color: white;
+  border: white 1px solid;
+  border-radius: 3px;
+  margin-left: 5px;
 }
 
 .sidenav a:hover {
